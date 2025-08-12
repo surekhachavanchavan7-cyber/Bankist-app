@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Login Form -->
+    <div class="login">
+      <h2>Bankist Login</h2>
+      <input type="text" placeholder="Username" id="input-username" />
+      <input type="password" placeholder="PIN" id="input-pin" />
+      <button id="btn-login">Login</button>
+    </div>
+
+    <!-- Main App -->
+    <div class="app hidden">
+      <h2 class="welcome">Welcome, <span id="user-name"></span> 👋</h2>
+      <p>Balance: ₹ <span id="balance">0</span></p>
+
+      <!-- Movements -->
+      <div class="movements" id="movements"></div>
+
+      <!-- Transfer Money -->
+      <div class="actions">
+        <h3>Transfer Money</h3>
+        <input type="text" placeholder="To (username)" id="transfer-to" />
+        <input type="number" placeholder="Amount" id="transfer-amount" />
+        <button id="btn-transfer">Transfer</button>
+      </div>
+
+      <!-- Request Loan -->
+      <div class="actions">
+        <h3>Request Loan</h3>
+        <input type="number" placeholder="Loan Amount" id="loan-amount" />
+        <button id="btn-loan">Request Loan</button>
+      </div>
+
+      <!-- Close Account -->
+      <div class="actions">
+        <h3>Close Account</h3>
+        <input type="text" placeholder="Username" id="close-username" />
+        <input type="password" placeholder="PIN" id="close-pin" />
+        <button id="btn-close">Close Account</button>
+      </div>
+
+      <!-- Logout Timer -->
+      <p id="timer">Session Time: 120s</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
